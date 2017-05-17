@@ -7,7 +7,7 @@ nav {
 }
 
 nav a {
-  background-color: $nav-button-color;
+  background-color: $sage;
   color: white;
   padding: 8px 16px;
   margin: 8px;
@@ -20,31 +20,29 @@ nav a {
 
 
 // typography
-@import url(http://fonts.googleapis.com/css?family=Poiret+One|Quicksand:300,400,700);
-$poiret: "Poiret One", Helvetica;
-$quicksand: "Quicksand", Arial;
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Quicksand');
+$poiret: 'Poiret One', cursive;
+$quicksand: 'Quicksand', sans-serif;
 
 // base styles
 body {
   text-align: center;
   background: white;
   font-size: 16px;
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-bottom: 10vh;
   font-family: $poiret;
+  line-height: inherit;
 }
 
 img {
   max-width: 100%;
 }
 
-p {
-}
-
 a {
-  color: $sky-blue;
+  color: $cerulean-blue;
   &:hover{
-    color: darken($sky-blue, 10%);
+    color: darken($cerulean-blue, 10%);
     text-decoration: none;
   }
 }
@@ -57,97 +55,28 @@ div.main {
     max-width: 300px;
   }
   h1 {
-    color: $brown;
+    color: $cerulean-blue;
     font-size: 2.5em;
-    font-family: $quicksand;
-    font-weight: 400;
+    font-family: $poiret;
+    font-weight: 700;
   }
 }
 
 div.tagline {
   p{
-    font-size: 1.5em;
+    font-family: $quicksand;
+    font-size: 1.25em;
     letter-spacing: .5px;
+    color: $rose-ebony;
   }
 }
 
 // links
 .links {
   font-size: 1.25em;
-  a{
-    padding: .5em;
-  }
-}
-
-// social media
-.social-media{
-  padding: 1em;
-  a{
-    color: $brown;
-    font-size: 1.25em;
-    padding: .25em;
-    &:hover {
-      color: darken($brown, 10%);
-    }
-  }
-}
-
-// typography
-@import url(http://fonts.googleapis.com/css?family=Poiret+One|Quicksand:300,400,700);
-$poiret: "Poiret One", Helvetica;
-$quicksand: "Quicksand", Arial;
-
-// base styles
-body {
-  text-align: center;
-  background: white;
-  font-size: 16px;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   font-family: $poiret;
-}
-
-img {
-  max-width: 100%;
-}
-
-p {
-}
-
-a {
-  color: $sky-blue;
-  &:hover{
-    color: darken($sky-blue, 10%);
-    text-decoration: none;
-  }
-}
-
-// main content
-div.main {
-  img.profile {
-    border-radius: 50%;
-    width: 50%;
-    max-width: 300px;
-  }
-  h1 {
-    color: $brown;
-    font-size: 2.5em;
-    font-family: $quicksand;
-    font-weight: 400;
-  }
-}
-
-div.tagline {
-  p{
-    font-size: 1.5em;
-    letter-spacing: .5px;
-  }
-}
-
-// links
-.links {
-  font-size: 1.25em;
   a{
+    text-decoration: none;
     padding: .5em;
   }
 }
@@ -156,11 +85,11 @@ div.tagline {
 .social-media{
   padding: 1em;
   a{
-    color: $brown;
+    color: $sage;
     font-size: 1.25em;
     padding: .25em;
     &:hover {
-      color: darken($brown, 10%);
+      color: darken($rose-ebony, 10%);
     }
   }
 }

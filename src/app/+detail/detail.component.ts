@@ -15,12 +15,15 @@ console.log('`Detail` component loaded asynchronously');
   template: `
      <div class="container">
       <div class="main">
-        <img class="profile" [src]=" 'assets/img/headshot.jpg' " alt="Cowboy Willy Isto">
-        <h1>isto barton</h1>
+        <a [routerLink]=" ['./'] "
+           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          <img class="profile" [src]=" 'assets/img/compere.jpg' " alt="Cowboy Willy Isto">
+        </a>
+        <h1>isto barton - acting</h1>
     </div>
       <div class="tagline">
         <p>
-          Software Engineer by day.<br> Theatre fiend by night.
+          Theatre fiend by night. <br> Software Engineer by day.
         </p>
       </div>
       <div class="links">
