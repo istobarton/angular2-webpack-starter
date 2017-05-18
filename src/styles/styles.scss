@@ -2,52 +2,39 @@
 /* This file is for setting global styles  */
 @import 'variables';
 
-nav {
-  margin-top: 16px;
-}
-
-nav a {
-  background-color: $sage;
-  color: white;
-  padding: 8px 16px;
-  margin: 8px;
-  vertical-align: middle;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-
 // typography
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Quicksand');
 $poiret: 'Poiret One', cursive;
 $quicksand: 'Quicksand', sans-serif;
 
-// base styles
+/**
+  Animation Content
+ */
+img.profile {
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+
+rotate {
+  //-moz-transform:rotate(1080deg);
+  //-webkit-transform:rotate(1080deg);
+  //transform:rotate(1080deg);
+  border: 5px solid pink;
+}
+
+/**
+  Main Content
+ */
 body {
   text-align: center;
-  background: white;
   font-size: 16px;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
   font-family: $poiret;
   line-height: inherit;
+  margin: 0px 0px 0px 0px;
 }
 
-img {
-  max-width: 100%;
-}
-
-a {
-  color: $cerulean-blue;
-  &:hover{
-    color: darken($cerulean-blue, 10%);
-    text-decoration: none;
-  }
-}
-
-// main content
 div.main {
   img.profile {
     border-radius: 50%;
@@ -55,10 +42,11 @@ div.main {
     max-width: 300px;
   }
   h1 {
-    color: $cerulean-blue;
     font-size: 2.5em;
     font-family: $poiret;
     font-weight: 700;
+    display: inline;
+    padding: 5px;
   }
 }
 
@@ -67,8 +55,19 @@ div.tagline {
     font-family: $quicksand;
     font-size: 1.25em;
     letter-spacing: .5px;
-    color: $rose-ebony;
+    display: inline;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+.router-container {
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  height: 100%;
+  width: 100%;
 }
 
 // links
@@ -81,15 +80,143 @@ div.tagline {
   }
 }
 
-// social media
-.social-media{
-  padding: 1em;
-  a{
-    color: $sage;
-    font-size: 1.25em;
-    padding: .25em;
-    &:hover {
-      color: darken($rose-ebony, 10%);
+/**
+ Day Styling
+ */
+.day {
+  background-color: $white;
+  h1 {
+    color: $day-blue;
+  }
+  div.tagline{
+    p{
+      color: $day-green;
+    }
+  }
+  a {
+    color: $day-purple;
+    &:hover{
+      color: darken($day-purple, 40%);
     }
   }
 }
+
+/**
+ Night Styling
+ */
+.night {
+  background-color: $neon-black;
+
+  div.tagline{
+    p{
+    }
+  }
+  a {
+    color: $neon-pink;
+    &:hover {
+      text-shadow: -.1vw 0vw .5vw $neon-pink, -.15vw 0vw .9vw $neon-pink, -.2vw 0vw .9vw $neon-pink,
+      -.1vw 0vw 12vw $neon-dark-pink, -.2vw 0vw 12vw $neon-dark-pink, -.4vw 0vw 12vw $neon-dark-pink,
+      -.1vw 0vw 21vw $neon-dark-pink, -.2vw 0vw 21vw $neon-dark-pink, -.4vw 0vw 3vw $neon-dark-pink, .2vw 0vw40vw $neon-dark-pink;
+    }
+  }
+}
+
+.green-light-out {
+  text-shadow:
+    -.1vw 0vw .1vw $neon-green-off, -.15vw 0vw .2vw $neon-green-off, -.2vw 0vw .2vw $neon-green-off,
+    -.1vw 0vw .1vw $neon-dark-green, -.2vw 0vw .1vw $neon-dark-green, -.4vw 0vw .1vw $neon-dark-green,
+    -.1vw 0vw .2vw $neon-dark-green, -.2vw 0vw .2vw $neon-dark-green, -.4vw 0vw .2vw $neon-dark-green, .2vw 0vw .5vw $neon-dark-green;
+  color: $neon-green-off;
+}
+
+.links-neon {
+  text-shadow:
+    -.1vw 0vw .1vw $neon-pink, -.15vw 0vw .2vw $neon-pink, -.2vw 0vw .2vw $neon-pink,
+    -.1vw 0vw 3vw $neon-dark-pink, -.2vw 0vw 3vw $neon-dark-pink, -.4vw 0vw 3vw $neon-dark-pink,
+    -.1vw 0vw 5vw $neon-dark-pink, -.2vw 0vw 5vw $neon-dark-pink, -.4vw 0vw .8vw $neon-dark-pink, .2vw 0vw 10vw $neon-dark-pink;
+  color: $neon-pink;
+}
+
+.isto {
+  text-shadow:
+    -.1vw 0vw .1vw $neon-blue, -.15vw 0vw .2vw $neon-blue, -.2vw 0vw .2vw $neon-blue,
+    -.1vw 0vw 3vw $neon-dark-blue, -.2vw 0vw 3vw $neon-dark-blue, -.4vw 0vw 3vw $neon-dark-blue,
+    -.1vw 0vw 5vw $neon-dark-blue, -.2vw 0vw 5vw $neon-dark-blue, -.4vw 0vw .8vw $neon-dark-blue, .2vw 0vw 10vw $neon-dark-blue;
+  color: $neon-blue;
+}
+
+.barton {
+  text-shadow:
+    -.1vw 0vw .1vw $neon-blue-off, -.15vw 0vw .2vw $neon-blue-off, -.2vw 0vw .2vw $neon-blue-off,
+    -.1vw 0vw .1vw $neon-dark-blue, -.2vw 0vw .1vw $neon-dark-blue, -.4vw 0vw .1vw $neon-dark-blue,
+    -.1vw 0vw .2vw $neon-dark-blue, -.2vw 0vw .2vw $neon-dark-blue, -.4vw 0vw .2vw $neon-dark-blue, .2vw 0vw .5vw $neon-dark-blue;
+  color: $neon-blue-off;
+}
+
+/**
+ * Animations
+ */
+.flicker {
+  animation: flashing-neon-blue .1s 3s ease 3;
+  -moz-animation: flashing-neon-blue .1s 3s ease 3;
+  /* Firefox */
+  -webkit-animation: flashing-neon-blue .1s 3s ease 3;
+  /* Safari and Chrome */
+  -o-animation: flashing-neon-blue .1s 3s ease 3;
+  /* Opera */
+}
+
+.flashing-neon-green {
+  animation: flashing-neon-green 2s infinite;
+  -moz-animation: flashing-neon-green 2s infinite;
+  /* Firefox */
+  -webkit-animation: flashing-neon-green 2s infinite;
+  /* Safari and Chrome */
+  -o-animation: flashing-neon-green 2s infinite;
+  /* Opera */
+}
+
+@keyframes flashing-neon-green {
+  0%,
+  100% {
+    text-shadow:
+      -.1vw 0vw .1vw $neon-green, -.15vw 0vw .2vw $neon-green, -.2vw 0vw .2vw $neon-green,
+      -.1vw 0vw 3vw $neon-dark-green, -.2vw 0vw 3vw $neon-dark-green, -.4vw 0vw 3vw $neon-dark-green,
+      -.1vw 0vw 5vw $neon-dark-green, -.2vw 0vw 5vw $neon-dark-green, -.4vw 0vw .8vw $neon-dark-green, .2vw 0vw 10vw $neon-dark-green;
+    color: $neon-green;
+  }
+  50% {
+    text-shadow:
+      -.1vw 0vw .1vw $neon-green-off, -.15vw 0vw .2vw $neon-green-off, -.2vw 0vw .2vw $neon-green-off,
+      -.1vw 0vw .1vw $neon-dark-green, -.2vw 0vw .1vw $neon-dark-green, -.4vw 0vw .1vw $neon-dark-green,
+      -.1vw 0vw .2vw $neon-dark-green, -.2vw 0vw .2vw $neon-dark-green, -.4vw 0vw .2vw $neon-dark-green, .2vw 0vw .5vw $neon-dark-green;
+    color: $neon-green-off;
+  }
+}
+
+@keyframes flashing-neon-blue {
+  0%,
+  100% {
+    text-shadow:
+      -.1vw 0vw .1vw $neon-blue, -.15vw 0vw .2vw $neon-blue, -.2vw 0vw .2vw $neon-blue,
+      -.1vw 0vw 3vw $neon-dark-blue, -.2vw 0vw 3vw $neon-dark-blue, -.4vw 0vw 3vw $neon-dark-blue,
+      -.1vw 0vw 5vw $neon-dark-blue, -.2vw 0vw 5vw $neon-dark-blue, -.4vw 0vw .8vw $neon-dark-blue, .2vw 0vw 10vw $neon-dark-blue;
+    color: $neon-blue;
+  }
+  50% {
+    text-shadow:
+      -.1vw 0vw .1vw $neon-blue-off, -.15vw 0vw .2vw $neon-blue-off, -.2vw 0vw .2vw $neon-blue-off,
+      -.1vw 0vw .1vw $neon-dark-blue, -.2vw 0vw .1vw $neon-dark-blue, -.4vw 0vw .1vw $neon-dark-blue,
+      -.1vw 0vw .2vw $neon-dark-blue, -.2vw 0vw .2vw $neon-dark-blue, -.4vw 0vw .2vw $neon-dark-blue, .2vw 0vw .5vw $neon-dark-blue;
+    color: $neon-blue-off;
+  }
+}
+
+
+
+
+
+
+
+
+

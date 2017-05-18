@@ -19,21 +19,20 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `    
-    <main>
+
       <router-outlet></router-outlet>
-    </main>
+  
   `
 })
 export class AppComponent implements OnInit {
   public name = 'Isto Barton';
 
-  constructor(){
-
   public ngOnInit() {
     console.log('Hello!');
   }
-
 }
+
+
 
 /*
  * Please review the https://github.com/AngularClass/angular2-examples/ repo for

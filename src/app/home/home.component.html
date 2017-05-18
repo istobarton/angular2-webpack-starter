@@ -1,12 +1,24 @@
-<div class="container">
+<div class="container router-container day">
   <div class="main">
-    <a [routerLink]=" ['./detail'] "
-       routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-      <img class="profile" [src]=" 'assets/img/sassy_square.jpg' " alt="Cowboy Willy Isto">
+    <a [routerLink]=" ['./act'] "
+       (click)="lightSwitch($event)"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]= "{exact: true}"
+    >
+      <img
+        class="profile"
+        [ngClass]="{'rotate': true}"
+        [src]=" 'assets/img/sassy_square.jpg' "
+        alt="Cowboy Willy Isto"
+      >
     </a>
-    <h1>Isto Barton</h1>
+
+    <br>
+    <h1>Isto</h1> <h1>Barton</h1>
+
   </div>
   <div class="tagline">
+    <button (click)="lightSwitch($event)">test</button>
     <p>
       Engineer by day.<br> Actor by night.
     </p>
