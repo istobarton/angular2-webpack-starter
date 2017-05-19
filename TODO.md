@@ -1,6 +1,5 @@
 To-do Tasks:
-* Spacing for the paragraph tags in night vision
-* Highlighting for links in night vision
+* Highlighting for links in night vision - brighter
 * Updating acting resume for link
 * Assembling images/videos for links
 * Spinning image on click? 
