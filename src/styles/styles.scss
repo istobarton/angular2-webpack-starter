@@ -16,11 +16,10 @@ img.profile {
   transition: all .25s linear;
 }
 
-
-rotate {
-  //-moz-transform:rotate(1080deg);
-  //-webkit-transform:rotate(1080deg);
-  //transform:rotate(1080deg);
+.rotate {
+  -moz-transform:rotate(1080deg);
+  -webkit-transform:rotate(1080deg);
+  transform:rotate(1080deg);
   border: 5px solid pink;
 }
 
@@ -54,7 +53,7 @@ div.tagline {
   p{
     font-family: $quicksand;
     font-size: 1.25em;
-    letter-spacing: .5px;
+    letter-spacing: 3px;
     display: inline;
   }
 }
@@ -119,6 +118,10 @@ a {
       -.1vw 0vw 21vw $neon-dark-pink, -.2vw 0vw 21vw $neon-dark-pink, -.4vw 0vw 3vw $neon-dark-pink, .2vw 0vw40vw $neon-dark-pink;
     }
   }
+}
+
+.special-n {
+  letter-spacing: 5px;
 }
 
 .green-light-out {

@@ -23,7 +23,7 @@ import { ActivatedRoute } from '@angular/router';
         <p class="flashing-neon-green">Actor</p> <p class="green-light-out">by</p> <p class="flashing-neon-green">night</p><p class="green-light-out">.</p>
       </div>
       <div class="tagline">
-        <p class="green-light-out">Engi</p><p class="flashing-neon-green">n</p><p class="green-light-out">eer by</p><p class="flashing-neon-green"> day.</p>
+        <p class="green-light-out">Engi<span class="flashing-neon-green special-n">n</span><span class="green-light-out">eer by</span></p><p class="flashing-neon-green"> day.</p>
       </div>
       <div class="links links-neon">
         <a href="mailto:istobarton@gmail.com">email</a>
